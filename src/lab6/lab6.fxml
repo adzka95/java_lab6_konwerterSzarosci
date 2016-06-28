@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="540.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab6.Lab6">
+    <Text layoutX="135" layoutY="30"  text="Przetwarzanie obrazow">
+            <font>
+                <Font name="Arial" size="24.0" />
+            </font>
+    </Text>
+    
+     <Button layoutX="10" layoutY="50" id="wybierzPliki" text="Wybierz pliki" onAction="#wybierzPliki" />
+      <Button layoutX="100" layoutY="50" id="dodajSciezke" text="Folder docelowy" onAction="#dodajSciezke" />
+      <Button layoutX="210" layoutY="50" id="rownolegle" text="Przetworz rownolegle" onAction="#zamienRownolegle" />
+      <TextField layoutX="345" layoutY="50"  fx:id="iloscWatkow" text="1" prefWidth="40.0"/>  
+      <Button layoutX="390" layoutY="50" id="sekwencyjnie" text="Przetworz sekwencujnie" onAction="#zamienSekwencyjnie" />
+      <Label layoutX="20" layoutY="90" fx:id="sciezka" text="sciezka"/>
+       
+    <TableView fx:id="tabela" prefHeight="530.0" prefWidth="520.0" editable="true" layoutX="10" layoutY="120"  >
+        <columns>
+            <TableColumn fx:id="kolumnaNazwa" prefWidth="220.0" text="Nazwa"  >
+                <cellValueFactory>
+                    <PropertyValueFactory property="nazwa"/> 
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="kolumnaPostep" prefWidth="150.0" text="Postep" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="postep"/> 
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="kolumnaStatus" prefWidth="150.0" text="Status" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="status"/> 
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    
+    
+    
+      
+        
+    <Label layoutX="20" layoutY="660" fx:id="czas" text="czas"/>
+      
+</AnchorPane>
+ 
